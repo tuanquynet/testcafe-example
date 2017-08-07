@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign in</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body id="app" class="app">
+	<script>
+		$(document).on('ready', function () {
+			function clearToken() {
+				window.localStorage.setItem('token', undefined);
+			}
+
+			$('.sign-in').on('click', function (params) {
+				clearToken();
+				setTimeout(function () {
+					const token = 'abc12345' + Math.random() * 1000;
+					window.localStorage.setItem('token', token);
+					$('.container').html(token);
+				}, 2000);
+			});
+		})
+	</script>
+
+	<a class="sign-in" href="#">Sign In</a>
+	<div class="container" href="#">container</div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "testcafe-example",
+  "version": "1.0.0",
+  "description": "Practice automation test with testcafe",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "testcafe chrome tests/ -S --screenshots tests/.screenshots"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuanquynet/testcafe-example.git"
+  },
+  "keywords": [
+    "TestCafe"
+  ],
+  "author": "Quy Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuanquynet/testcafe-example/issues"
+  },
+  "homepage": "https://github.com/tuanquynet/testcafe-example#readme",
+  "devDependencies": {
+    "testcafe": "^0.17.0"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<title>Dashboard</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body id="app" class="app">
+	<script>
+		$(document).on('ready', function () {
+			console.log(window.localStorage.getItem('token'));
+			function clearToken() {
+				window.localStorage.setItem('token', undefined);
+			}
+			$('.clear-token').on('click', function() {
+				clearToken();
+			});
+			const token = window.localStorage.getItem('token');
+			$('.container').html(token);
+		})
+	</script>
+	<h2>Dashboard page</h2>
+	<a class="clear-token" href="#">Clear token</a>
+	<div class="container" href="#">container</div>
+</body>
+
+</html>
